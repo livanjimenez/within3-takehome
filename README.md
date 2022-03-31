@@ -3,7 +3,7 @@
 ```
 Git Clone
 
-cd within3
+cd client
 
 yarn install
 
