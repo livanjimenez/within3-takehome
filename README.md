@@ -3,7 +3,7 @@
 ```
 Git Clone
 
-cd client
+cd within3-takehome && cd client
 
 yarn install
 
