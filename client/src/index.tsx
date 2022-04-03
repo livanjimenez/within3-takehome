@@ -3,8 +3,24 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ApolloProvider } from "@apollo/client";
-import { client } from "./graphql";
+import {
+  ApolloClient,
+  HttpLink,
+  NormalizedCacheObject,
+  InMemoryCache,
+  ApolloProvider,
+} from "@apollo/client";
+
+const httpLink = new HttpLink({
+  uri: "https://api.spacex.land/graphql",
+});
+
+const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache({
+    addTypename: false,
+  }),
+});
 
 ReactDOM.render(
   <React.StrictMode>

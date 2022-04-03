@@ -1,3 +1,18 @@
+body {
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgb(174, 238, 213) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
 .App {
   text-align: center;
+  font-family: "Arial Black", sans-serif;
+  font-size: 4.5em;
+  letter-spacing: -1px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(82, 82, 82);
+  text-transform: uppercase;
 }
